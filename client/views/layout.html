@@ -1,0 +1,108 @@
+<head>
+  <title>TimeBob</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+  <div class="container">
+  <div class="alert alert-warning" role="alert">
+    You have not yet given me any information for Monday. So lets start with that. 
+  </div>
+  <nav>
+    <ul class="pager">
+      <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li><h2 style="display: inline;">Monday 1st of June, 2015</h2></li>
+      <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+  </nav>
+  <hr/>
+
+  <div class="well well-sm text-muted">
+    <h4>Yesterday</h4>
+    Working on Abbeycore with these tags: UI, Particles, Metrics
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        So what did you do today?
+      </h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label style="display:block;">Time</label>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">1 hour</button>
+          <button type="button" class="btn btn-default">2 hours</button>
+          <button type="button" class="btn btn-default">4 hours</button>
+          <button type="button" class="btn btn-default">6 hours</button>
+          <button type="button" class="btn btn-default">All day</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Project</label>
+        <select class="form-control">
+          <option>AbbeyCore</option>
+          <option>Renowned Explorers</option>
+          <option>Skeleton</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Phase</label>
+        <select class="form-control">
+          <option>Test</option>
+          <option>Implementation</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Short description</label>
+        <textarea class="form-control" rows="2"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Labels</label>
+        <input type="labels" class="form-control" placeholders="Labels">
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        You've pushed these git commits today
+      </h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>45a2bfe: Henk is een coole baas commit</li>
+        <li>37ffda3: Build gefixt</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        You've updated these Jira issues
+       </h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>45a2bfe: Henk is een coole baas commit</li>
+        <li>37ffda3: Build gefixt</li>
+      </ul>
+    </div>
+  </div>
+  
+  {{> yield}}
+  </div>
+</template>
